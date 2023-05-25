@@ -1,0 +1,235 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>snaks</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Padauk:wght@700&display=swap');
+		body{
+			margin: 0;
+			font-family: 'Padauk', sans-serif;
+		}
+		.parallax,.parallax1{
+			background-image: url(img/background.jpg);
+			height: max-content;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.page-title{
+			background: rgba(0, 0, 0, 0.5);
+			text-align: center;
+			color: white;
+			padding: 50px;
+			font-variant: small-caps;
+			font-size: 60px;
+			font-family: cursive;
+			letter-spacing: 10px;
+
+		} 
+		.sticky{
+			background-attachment: fixed;
+			top: 0;
+			width: 100%;
+		}
+		.menu{
+			background-color:goldenrod;
+			text-align: center;
+		}
+		.menu-ul{
+			margin: 0;
+			padding: 0;
+			display: inline;
+		}
+		.menu-ul li{
+			font-size: 25px;
+			list-style: none;
+			color: darkred;
+			font-weight: bolder;
+			display: inline-block;
+			padding: 25px 25px 26px 25px;
+		}
+		.a-menu,.a-links{
+			text-decoration: none;
+			color: white;
+		}
+		.menu-ul li:hover{
+			background: maroon;
+			color: white;
+			transform: scale(1.1);
+		}
+		.search-box{
+			border: 1px solid white;
+			border-radius: 50px;
+			background: white;
+			width: max-content;
+			display: inline-block;
+			margin: 8px;
+		}
+		.search-box:hover{
+			box-shadow: 0 0 10px 2px #5b8c5a;
+			border: 1px solid #5b8c5a;
+		}
+		.search-input{
+			width: 250px;
+			border: none;
+			font-size: 16px;
+			outline:none;
+			background: transparent;
+			margin: 15px 0 0 10px;
+		}
+		i{
+			font-size: 20px;
+			margin: 0 10px 0 0;
+		}
+		button{
+			background: transparent;
+			border: none;
+			outline: none;
+		}
+
+		 .parallax1{
+		 	background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+		 }
+		 .footer{
+		 	background: rgba(0, 0, 0, 0.5);
+		 	text-align: center;
+		 	padding: 20px;
+		 }
+		 .quick-links{
+		 	color: white;
+		 	font-size: 20px;
+		 	font-weight: bold;
+		 	display: inline-block;
+		 	min-width: 30%;
+		 }
+		 .quick-links ul{
+		 	padding: 0;
+		 }
+		 .quick-links li{
+		 	list-style: none;
+		 	padding: 10px;
+		 	font-weight: 300;
+		 }
+		 a-links:hover{
+		 	color: #fd5e53;
+		 }
+		 .copyrights{
+		 	font-size: 16px;
+		 	font-family: verdana,arial,sans-serif,helvecita;
+		 	text-align: center;
+		 	margin: 15px;
+		 }
+		 .items{
+		 	background-color: white;
+
+		 	background-attachment: fixed;
+		 	float: left;
+		 	height: 550px;
+		 	width: 250px;
+		 }
+		  .des{
+		 	background-attachment: fixed;
+		 	float: right;
+		 	height: 600px;
+		 	width: 1095px;
+		 }
+		iframe{
+		 	width: 1096px;
+		 	height: 550px;
+		 }
+		 .items{
+		 	font-size: 25px;
+		 }
+
+	</style>
+	<script>
+		function stickyMenu(){
+			var sticky=document.getElementById('sticky');
+			if (window.pageYOffset > 220) {
+				sticky.classList.add('sticky');
+			}
+			else{
+				sticky.classList.remove('sticky');
+			}
+		}
+		window.onscroll = function(){
+			stickyMenu();
+		}
+	</script>
+</head>
+<body>
+	<div class="parallax">
+		<div class="page-title">Snaks</div>
+	</div>
+	<div class="menu" id="sticky">
+		<ul class="menu-ul">
+			<a href="main.html" class="a-menu"><li>Home</li></a>
+			<a href="vegetables.html" class="a-menu"><li>Vegetables</li></a>
+			<a href="fruits.html" class="a-menu"><li>Fruits</li></a>
+			<a href="snaks.html" class="a-menu"><li>Snaks</li></a>
+		</ul>
+		<div class="search-box" style="float: right;margin-right: 30px;margin-top: 20px;">
+			<form>
+				<input type="text" placeholder="search here ..." name="search" class="search-input"/>
+				
+				<button type="submit"><i class="fa fa-search"></i></button>
+				
+			</form>
+		</div>
+	</div>
+
+	<div class="items">
+		<br>&nbsp;&nbsp;<a href="w.html" target="fr">Snacks & Namkeen</a><br>
+		<br>&nbsp;&nbsp;<a href="b.html" target="fr">Biscuits & Cookies</a><br>
+		<br>&nbsp;&nbsp;<a href="p.html" target="fr">Noodle & Pasta</a><br>
+		<br>&nbsp;&nbsp;<a href="c.html" target="fr">Cold Drinks</a><br>
+	</div>
+	<div class="des">
+		<iframe name="fr" src="w.html">
+	</div>
+	<div class="des">
+		<iframe name="fr1" src="b.html">
+	</div>
+	<div class="des">
+		<iframe name="fr2" src="p.html">
+	</div>
+	<div class="des">
+		<iframe name="fr3" src="c.html">
+	</div>
+	
+
+	<div class="parallax1">
+		<div class="footer">
+			<div class="quick-links">
+				<div>Locations</div>
+				<ul>
+					<li><a href="" class="a-links">Address 1</a></li>
+					<li><a href="" class="a-links">Address 1</a></li>
+					<li><a href="" class="a-links">Address 1</a></li>
+				</ul>
+			</div>
+			<div class="quick-links">
+				<div>Careers</div>
+				<ul>
+					<li><a href="" class="a-links">Packing Staff</a></li>
+					<li><a href="" class="a-links">Delivery Agents</a></li>
+					<li><a href="" class="a-links">Shelf Fillers</a></li>
+				</ul>
+			</div>
+			<div class="quick-links">
+				<div>Quick Links</div>
+				<ul>
+					<li><a href="" class="a-links">Contact Us</a></li>
+					<li><a href="" class="a-links">FAQ</a></li>
+					<li><a href="" class="a-links">Help</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="copyrights">
+		<i class="far fa-copyright fa-lx"></i>2021 By Programmers web Drive
+	</div>
+</body>
+</html>

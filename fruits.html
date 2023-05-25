@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>fruits</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Padauk:wght@700&display=swap');
+		body{
+			margin: 0;
+			font-family: 'Padauk', sans-serif;
+		}
+		.parallax,.parallax1{
+			background-image: url(img/background.jpg);
+			height: max-content;
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.page-title{
+			background: rgba(0, 0, 0, 0.5);
+			text-align: center;
+			color: white;
+			padding: 50px;
+			font-variant: small-caps;
+			font-size: 70px;
+			font-family: cursive;
+			letter-spacing: 10px;
+
+		} 
+		.sticky{
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		.menu{
+			background-color:goldenrod;
+			text-align: center;
+		}
+		.menu-ul{
+			margin: 0;
+			padding: 0;
+			display: inline;
+		}
+		.menu-ul li{
+			font-size: 25px;
+			list-style: none;
+			color: darkred;
+			font-weight: bolder;
+			display: inline-block;
+			padding: 25px 25px 26px 25px;
+
+		}
+		.a-menu,.a-links{
+			text-decoration: none;
+			color: white;
+		}
+		.menu-ul li:hover{
+			background: maroon;
+			color: white;
+			transform: scale(1.1);
+		}
+		.search-box{
+			border: 1px solid white;
+			border-radius: 50px;
+			background: white;
+			width: max-content;
+			display: inline-block;
+			margin: 8px;
+		}
+		.search-box:hover{
+			box-shadow: 0 0 10px 2px #5b8c5a;
+			border: 1px solid #5b8c5a;
+		}
+		.search-input{
+			width: 250px;
+			border: none;
+			font-size: 16px;
+			outline:none;
+			background: transparent;
+			margin: 15px 0 0 10px;
+		}
+		i{
+			font-size: 20px;
+			margin: 0 10px 0 0;
+		}
+		button{
+			background: transparent;
+			border: none;
+			outline: none;
+		}
+		.container, .deals-container{
+			margin: 50px 50px 50px 5%;
+			width: 90%;
+			text-align: center;
+		}
+		.categories,.items{
+			width: max-content;
+			margin: 25px;
+			border: 1px solid #184d47;
+			border-radius: 0 0 50px 50px;
+			display: inline-block;
+		}
+		.categories:hover,.items: hover{
+			box-shadow: 0 0 10px 3px #184d47;
+		}
+		.item-image{
+			height: 200px;
+			width: 200px;
+			boeder-radius: 0 0 50px 50px;
+			padding: 10px;
+		}
+		.image-title{
+			text-align: center;
+			padding: 10px;
+			font-weight: bold;
+		}
+		a{
+			text-decoration: none;
+		}
+		.title{
+			padding: 50px;
+			font-size: 50px;
+			font-weight: bold;
+			letter-spacing: 10px;
+			color: white;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		.deal{
+			padding: 50px;
+			font-size: 20px;
+			font-weight: bold;
+			color: white;
+			display: inline-block;
+			margin: 20px;
+			max-width: 20%;
+			background: linear-gradient(120deg,#16817a 20%,#cee397 50%,#16817a 80%);
+		}
+		.coupon-btn:hover{
+			box-shadow: 0 0 10px 5px white inset;
+		}
+		.image{
+			display: inline-block;
+		}
+		.item-image-size{
+			height: 200px;
+			width: 300px;
+			padding: 5px;
+		}
+		.description{
+			margin: 20px;
+			min-height: 100px;
+		}
+		.item-select{
+			margin: 10px 0 0 0;
+		}
+		.buynow-btn{
+			border: 1px solid #184d47;
+			background: #184d47;
+			padding: 5px 15px;
+			border-radius: 20px;
+			font-weight: bold;
+			margin-top: 10px;
+			color: white;
+		}
+		.buynow-btn:hover{
+			border: 2px solid #5b8c5a;
+			box-shadow: 0 0 10px 5px #5b8c5a inset;
+		}
+		 .parallax1{
+		 	background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+		 }
+		 .footer{
+		 	background: rgba(0, 0, 0, 0.5);
+		 	text-align: center;
+		 	padding: 20px;
+		 }
+		 .quick-links{
+		 	color: white;
+		 	font-size: 20px;
+		 	font-weight: bold;
+		 	display: inline-block;
+		 	min-width: 30%;
+		 }
+		 .quick-links ul{
+		 	padding: 0;
+		 }
+		 .quick-links li{
+		 	list-style: none;
+		 	padding: 10px;
+		 	font-weight: 300;
+		 }
+		 a-links:hover{
+		 	color: #fd5e53;
+		 }
+		 .copyrights{
+		 	font-size: 16px;
+		 	font-family: verdana,arial,sans-serif,helvecita;
+		 	text-align: center;
+		 	margin: 15px;
+		 }
+	</style>
+	<script>
+		function stickyMenu(){
+			var sticky=document.getElementById('sticky');
+			if (window.pageYOffset > 220) {
+				sticky.classList.add('sticky');
+			}
+			else{
+				sticky.classList.remove('sticky');
+			}
+		}
+		window.onscroll = function(){
+			stickyMenu();
+		}
+	</script>
+</head>
+<body>
+	<div class="parallax">
+		<div class="page-title">Fruits</div>
+	</div>
+	<div class="menu" id="sticky">
+		<ul class="menu-ul">
+			<a href="main.html" class="a-menu"><li>Home</li></a>
+			<a href="vegetables.html" class="a-menu"><li>Vegetables</li></a>
+			<a href="fruits.html" class="a-menu"><li>Fruits</li></a>
+			<a href="snaks.html" class="a-menu"><li>Snaks</li></a>
+		</ul>
+		<div class="search-box" style="float: right;margin-right: 30px;margin-top: 20px;">
+			<form>
+				<input type="text" placeholder="search here ..." name="search" class="search-input"/>
+				
+				<button type="submit"><i class="fa fa-search"></i></button>
+				
+			</form>
+		</div>
+	</div>
+	<div class="deals-container" id="fruits">
+		<div class="items">
+			<div class="images">
+				<img src="img/a.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Apples</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/b.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Bananas</b><br/>
+				<div class="item-select">
+					Price : $2.49/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/k.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Kivi</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/m.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Mango</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/w.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Watermelon</b><br/>
+				<div class="item-select">
+					Price : $2.49/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/s.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Strawberry</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/a.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Apples</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/b.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Bananas</b><br/>
+				<div class="item-select">
+					Price : $2.49/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/k.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Kivi</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/m.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Mango</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/w.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Watermelon</b><br/>
+				<div class="item-select">
+					Price : $2.49/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+		<div class="items">
+			<div class="images">
+				<img src="img/s.jpg" class="item-image-size">
+			</div>
+			<div class="description">
+				<b>Organic Strawberry</b><br/>
+				<div class="item-select">
+					Price : $2.99/250grams
+				</div>
+				<label>Qty : </label>
+				<select class="item-select">
+					<option>250 grams</option>
+					<option>500 grams</option>
+					<option>750 grams</option>
+					<option>1000 grams</option>
+				</select><br/>
+				<button class="buynow-btn">Buy Now</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="parallax1">
+		<div class="footer">
+			<div class="quick-links">
+				<div>Locations</div>
+				<ul>
+					<li><a href="" class="a-links">Jamnagar</a></li>
+					<li><a href="" class="a-links">Baroda</a></li>
+					<li><a href="" class="a-links">Mumbai</a></li>
+				</ul>
+			</div>
+			<div class="quick-links">
+				<div>Careers</div>
+				<ul>
+					<li><a href="" class="a-links">Packing Staff</a></li>
+					<li><a href="" class="a-links">Delivery Agents</a></li>
+					<li><a href="" class="a-links">Shelf Fillers</a></li>
+				</ul>
+			</div>
+			<div class="quick-links">
+				<div>Quick Links</div>
+				<ul>
+					<li><a href="" class="a-links">Contact Us</a></li>
+					<li><a href="" class="a-links">FAQ</a></li>
+					<li><a href="" class="a-links">Help</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="copyrights">
+		<i class="far fa-copyright fa-lx"></i>2021 By Programmers web Drive
+	</div>
+</body>
+</html>

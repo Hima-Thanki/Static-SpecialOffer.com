@@ -1,0 +1,290 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>special offers</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Padauk:wght@700&display=swap');
+
+		body{
+			margin: 0;
+			font-family: 'Padauk', sans-serif;
+			background-color: snow;
+		}
+		.parallax,.parallax1{
+			background: url(img/background.jpg);
+			text-align: center;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+		}
+		.page-title{
+			background: rgba(0, 0, 0, 0.2);
+			color: darkred;
+			padding: 50px;
+			font-size: 70px;
+			font-family: 'Lobster', cursive;
+			letter-spacing: 8px;
+		} 
+		.sticky{
+			position: fixed;
+			font-size: 100px;
+			top: 0;
+			width: 100%;
+		}
+		.menu{
+			background-color:goldenrod;
+			text-align: left;
+		}
+		.menu-ul{
+			margin: 0px;
+			padding: 0px;
+			display: inline;
+		}
+		.menu-ul li{
+			font-size: 25px;
+			list-style: none;
+			display: inline-block;
+			padding: 25px 25px 26px 25px;
+
+		}
+		.a-menu,.a-links{
+			text-decoration: none;
+			font-family: 'Padauk', sans-serif;
+			color: darkred;
+		}
+		.menu-ul li:hover{
+			background: maroon;
+			color: white;
+			transform: scale(1.1);
+		}
+		.search-box{
+			border: 1px solid white;
+			border-radius: 70px;
+			background: white;
+			display: inline-block;
+			margin: 5px;
+		}
+		.search-input{
+			width: 200px;
+			border: none;
+			font-size: 15px;
+			outline:none;
+			background: transparent;
+			margin: 9px 0 0 10px;
+		}
+		i{
+			font-size: 30px;
+			margin: 0 10px 0 0;
+		}
+		button{
+			background: transparent;
+			border: none;
+			outline: none;
+		}
+		.container, .deals-container{
+			margin: 0 20px 20px 6%;
+			width: 90%;
+			text-align: center;
+		}
+		.categories,.items{
+			background-color: goldenrod;
+			font-family: 'Padauk', sans-serif;
+			width: max-content;
+			margin: 25px;
+			border: 1px solid #184d47;
+			border-radius: 0 0 50px 50px;
+			display: inline-block;
+		}
+		.categories:hover,.items:hover{
+			box-shadow: 0 0 10px 3px saddlebrown;
+		}
+		.item-image{
+			height: 200px;
+			width: 220px;
+			boeder-radius: 0 0 50px 50px;
+			padding: 10px;
+		}
+		.image-title{
+			text-align: center;
+			padding: 10px;
+			font-size: 40px;
+			font-weight: initial;
+		}
+		a{
+			text-decoration: none;
+		}
+		.title{
+			padding: 20px;
+			font-size: 40px;
+			font-weight: bold;
+			letter-spacing: 5px;
+			color: white;
+			background: rgba(0, 0, 0, 0.7);
+		}
+		.deal{
+			padding: 50px;
+			font-size: 20px;
+			font-weight: bold;
+			color: white;
+			display: inline-block;
+			margin: 20px;
+			max-width: 20%;
+			background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+		}
+		.coupon-btn:hover{
+			box-shadow: 0 0 10px 5px white inset;
+		}
+		.image{
+			display: inline-block;
+		}
+		.item-image-size{
+			height: 200px;
+			width: 300px;
+			padding: 5px;
+		}
+		.description{
+			margin: 20px;
+			min-height: 100px;
+		}
+		.item-select{
+			margin: 10px 0 0 0;
+		}
+		.buynow-btn{
+			border: 1px solid #184d47;
+			background: #184d47;
+			padding: 5px 15px;
+			border-radius: 20px;
+			font-weight: bold;
+			margin-top: 10px;
+			color: white;
+		}
+		.buynow-btn:hover{
+			border: 2px solid #5b8c5a;
+			box-shadow: 0 0 10px 5px #5b8c5a inset;
+		}
+		 .parallax1{
+		 	background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+		 }
+		 .footer{
+		 	background: rgba(0, 0, 0, 0.5);
+		 	text-align: center;
+		 	padding: 20px;
+		 }
+		 .quick-links{
+		 	color: white;
+		 	font-size: 20px;
+		 	font-weight: bold;
+		 	display: inline-block;
+		 	min-width: 30%;
+		 }
+		 .quick-links ul{
+		 	padding: 0;
+		 }
+		 .quick-links li{
+		 	list-style: none;
+		 	padding: 10px;
+		 	font-weight: 300;
+		 }
+		 a-links:hover{
+		 	color: #fd5e53;
+		 }
+		 .copyrights{
+		 	font-size: 16px;
+		 	font-family: verdana,arial,sans-serif,helvecita;
+		 	text-align: center;
+		 	margin: 15px;
+		 }
+	</style>
+</head>
+<body>
+	<div class="parallax">
+		<div class="page-title">Special Offers</div>
+	</div>
+	<div class="menu" id="sticky">
+		<ul class="menu-ul">
+			<a href="main.html" class="a-menu"><li>Home</li></a>
+			<a href="contact.html" class="a-menu"><li>Contect Us</li></a>
+			<a href="about.html" class="a-menu"><li>About Us</li></a>
+		</ul>
+		<div class="search-box" style="float: right;margin-right: 30px;margin-top: 20px;">
+			<form>
+				<input type="text" placeholder="search here ..." name="search" class="search-input"/>
+				
+				<button type="submit"><i class="fa fa-search"></i></button>
+				
+			</form>
+		</div>
+	</div>
+	<div class="container">
+		<a href="vegetables.html">
+			<div class="categories">
+				<img src="img/1.jpg" class="item-image"/>
+				<div class="image-title" style="color:darkred;font-size: 30px;">Vegetables</div>
+			</div>
+		</a>
+		<a href="fruits.html">
+			<div class="categories">
+				<img src="img/2.jpg" class="item-image"/>
+				<div class="image-title" style="color:darkred;font-size: 30px;">Fruits</div>
+			</div>
+		</a>
+		<a href="snaks.html">
+			<div class="categories">
+				<img src="img/3.jpg" class="item-image"/>
+				<div class="image-title" style="color:darkred;font-size: 30px;">Snaks</div>
+			</div>
+		</a>
+	</div>
+	<div class="deals-container" id="deals">
+		<div class="parallax">
+			<div class="title">DEALS</div>
+		</div>
+		<div class="deal">
+			save 20% on min-purchase of $149 on vegetables<br/>
+			<button class="coupon-btn">Add Coupon</button>
+		</div>
+		<div class="deal">
+			save 10% on min-purchase of $179 on Fruits<br/>
+			<button class="coupon-btn">Add Coupon</button>
+		</div>
+		<div class="deal">
+			save 15% on min-purchase of $199 on Snaks<br/>
+			<button class="coupon-btn">Add Coupon</button>
+		</div>
+	</div>
+	<div class="parallax1">
+		<div class="footer">
+			<div class="quick-links">
+				<div>Locations</div>
+				<ul style="color:white;">
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Jamnagar</a></li>
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Baroda</a></li>
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Mumbai</a></li>
+				</ul>
+			</div>
+			<div class="quick-links">
+				<div>Careers</div>
+				<ul style="color:white;">
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Packing Staff</a></li>
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Delivery Agents</a></li>
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Shelf Fillers</a></li>
+				</ul>
+			</div>
+			<div class="quick-links">
+				<div>Quick Links</div>
+				<ul>
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Contact Us</a></li>
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">FAQ</a></li>
+					<li><a href="#" class="a-links" style="color:white;font-size: 20px;">Help</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="copyrights">
+		<i class="far fa-copyright fa-lx"></i>2021 By Programmers web Drive
+	</div>
+</body>
+</html>
